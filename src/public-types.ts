@@ -1,6 +1,6 @@
 /**
  * The key to use for signing the JWT.
- * 
+ *
  * Keys can be generated using the `smply` CLI by running `smply keys create`.
  * See our Getting Started docs at https://docs.statebacked.dev/ for more info.
  */
@@ -24,7 +24,7 @@ export type Days = "d" | "day" | "days";
 export type Weeks = "w" | "week" | "weeks";
 export type Years = "y" | "yr" | "yrs" | "year" | "years";
 export type TimeSpecifier = Seconds | Minutes | Hours | Days | Weeks | Years;
- 
+
 /**
  * Number of seconds since the epoch
  */
@@ -36,22 +36,24 @@ export type EpochSeconds = number;
 export type SigningOptions = {
   /**
    * JWT expiration configuration.
-   * 
+   *
    * Either specify `expires.in` or `expires.at`. `expires.at` takes precedence.
-   * 
-   * `expires.at` 
+   *
+   * `expires.at`
    */
-  expires: {
-    /**
-     * A string specifying a time duration, like "7d" or "30m".
-     */
-    in: `${number}${TimeSpecifier}`
-  } | {
-    /**
-     * A Date or number of seconds since epoch.
-     */
-    at: Date | EpochSeconds
-  };
+  expires:
+    | {
+        /**
+         * A string specifying a time duration, like "7d" or "30m".
+         */
+        in: `${number}${TimeSpecifier}`;
+      }
+    | {
+        /**
+         * A Date or number of seconds since epoch.
+         */
+        at: Date | EpochSeconds;
+      };
 
   /**
    * The issuer of the JWT. Should be set to your domain name.
