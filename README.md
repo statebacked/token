@@ -4,7 +4,8 @@
 Your end users make requests to [State Backed](https://statebacked.dev) to create instances of machines you've defined, read machine instance state, and send events to machine instances.
 Use these utilities to create a token to authenticate those requests.
 
-:warning: WARNING: The utilities in this package should only be used in trusted, server-side environments :warning:
+## :warning: WARNING: The utilities in this package should only be used in trusted, server-side environments :warning:
+
 Once you have generated a token, the token can be used by your client to interact with your State Backed machines but generating a token requires access to one of your secret keys, which must never be exposed.
 
 # State Backed authn/authz
