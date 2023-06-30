@@ -7,15 +7,15 @@ export * from "./public-types";
  * Given a State Backed key id and secret, end-user claims, and signing options,
  * return a Promise for a signed JWT suitable for sending in the authorization header
  * of requests to State Backed.
- * 
+ *
  * The end-user claims should include a `sub` claim with the end-user's unique id
  * and may include any other data that your machines' `allowRead` and `allowWrite`
  * authorization functions need.
- * 
+ *
  * It is best practice to set the issuer in your signing options to your domain
  * and set either `expires.at` or `expires.in` to a reasonable value, matching
  * your session duration.
- * 
+ *
  * @param key - The State Backed key id and secret to use for signing.
  *              You can generate one by running `smply keys create`.
  *              Check the Getting Started guide at https://docs.statebacked.dev/
@@ -36,7 +36,7 @@ export const signToken = (
   payload: { sub?: string; [key: string]: any },
   options: SigningOptions
 ) =>
-  new SignJWT(payload)
+  new SignJWT({ act: payload })
     .setProtectedHeader({ alg: "HS256", kid: stateBackedKeyId })
     .setAudience("https://api.statebacked.dev/")
     .setExpirationTime(
@@ -51,4 +51,3 @@ export const signToken = (
     )
     .setIssuedAt()
     .sign(Buffer.from(stateBackedSecretKey, "utf8"));
-

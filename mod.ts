@@ -36,7 +36,7 @@ export const signToken = (
   payload: { sub?: string; [key: string]: any },
   options: SigningOptions
 ) =>
-  new SignJWT(payload)
+  new SignJWT({ act: payload })
     .setProtectedHeader({ alg: "HS256", kid: stateBackedKeyId })
     .setAudience("https://api.statebacked.dev/")
     .setExpirationTime(
