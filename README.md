@@ -1,5 +1,5 @@
 # @statebacked/token - Utilities for generating end-user JWTs for the State Backed XState backend as a service
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/statebacked/token/blob/main/LICENSE) [![npm version](https://img.shields.io/npm/v/@statebacked/token.svg?style=flat)](https://www.npmjs.com/package/@statebacked/token) [![CI](https://github.com/statebacked/token/actions/workflows/ci.yaml/badge.svg)](https://github.com/statebacked/token/actions/workflows/ci.yaml) [![Docs](https://img.shields.io/badge/docs-machine_def-blue)](https://statebacked.github.io/token/)
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/statebacked/token/blob/main/LICENSE) [![npm version](https://img.shields.io/npm/v/@statebacked/token.svg?style=flat)](https://www.npmjs.com/package/@statebacked/token) [![CI](https://github.com/statebacked/token/actions/workflows/ci.yaml/badge.svg)](https://github.com/statebacked/token/actions/workflows/ci.yaml) [![Docs](https://img.shields.io/badge/docs-token-blue)](https://statebacked.github.io/token/)
 
 Your end users make requests to [State Backed](https://statebacked.dev) to create instances of machines you've defined, read machine instance state, and send events to machine instances.
 Use these utilities to create a token to authenticate those requests.
