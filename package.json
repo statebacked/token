@@ -1,6 +1,6 @@
 {
   "name": "@statebacked/token",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Utilities for generating end-user authentication tokens for the State Backed XState backend as a service",
   "main": "lib/index.js",
   "module": "es/index.js",
