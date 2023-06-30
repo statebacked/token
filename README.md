@@ -10,14 +10,12 @@ Once you have generated a token, the token can be used by your client to interac
 
 # State Backed authn/authz
 
-State Backed only allows requests that provide JWTs signed with your API keys.
+State Backed only processes requests that provide JWTs signed with your API keys.
 You can also include claims about your end-users in your JWTs.
 Your machines can use those end-user claims to authorize read and write requests.
 
 For example, you may only allow a user with id = 'xyz123' to read or write from a machine instance with the name 'xyz123'.
 Or, you may only allow users with a group that's included in your machine instance's `allowedGroups` context property to access the machine.
-
-The types and utilities exported by this package are useful in defining [State Backed](https://statebacked.dev) machine definitions.
 
 # Installation
 
